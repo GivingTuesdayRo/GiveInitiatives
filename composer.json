@@ -1,0 +1,30 @@
+{
+  "name": "giving-tuesday-ro/give-initiatives",
+  "description": "A plugin to list all initiatives.",
+  "homepage": "https://github.com/GivingTuesdayRo/GiveInitiatives",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Gabriel Solomon",
+      "email": "gabriel.solomon@galantom.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "GivingTuesdayRo\\GiveInitiatives\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.2.4",
+    "composer/installers": "^1.0.23",
+    "jjgrainger/posttypes": "^1.0.23"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.2"
+  }
+}
