@@ -17,15 +17,11 @@ class Initiatives extends AbstractTaxonomy
         $initiatives = new PostType('initiative',
             ['supports' => ['title', 'editor', 'thumbnail', 'tags']]);
 
-//        // Add the genre taxonomy to the book post type
-//        $initiatives->taxonomy('tags');
-
         // Add the genre taxonomy to the book post type
-        $initiatives->taxonomy('year');
+        $initiatives->taxonomy('Campaign Year');
         $initiatives->taxonomy('post_tag');
 
 //        $initiatives->filters(['year', 'post_tag']);
-
 
     }
 }
