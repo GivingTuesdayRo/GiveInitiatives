@@ -13,7 +13,7 @@ class Metaboxes
     public function register()
     {
         MetaboxManager::instance()->newMetabox([
-            'id' => 'initiatives_options',
+            'id' => 'initiative_options',
             'title' => 'Initiatives options',
             'postType' => 'initiative',
             'context' => 'side',
