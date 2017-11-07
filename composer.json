@@ -16,8 +16,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "GivingTuesdayRo\\GiveInitiatives\\": "src/"
-    }
+      "GivingTuesdayRo\\GiveInitiatives\\": "src/",
+      "GiveInitiatives\\Library\\": "library/"
+    },
+    "files": [
+      "library/helpers.php"
+    ]
   },
   "require": {
     "php": ">=5.2.4",
