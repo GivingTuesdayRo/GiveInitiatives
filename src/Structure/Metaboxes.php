@@ -19,6 +19,10 @@ class Metaboxes
             'context' => 'side',
             'fields' => [
                 [
+                    'name' => 'initiative_name',
+                    'label' => 'Denumire'
+                ],
+                [
                     'name' => 'organization_name',
                     'label' => 'Nume organizatie'
                 ],
