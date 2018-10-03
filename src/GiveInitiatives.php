@@ -7,6 +7,7 @@ use GivingTuesdayRo\GiveInitiatives\Hooks\Activation;
 use GivingTuesdayRo\GiveInitiatives\Hooks\Deactivation;
 use GivingTuesdayRo\GiveInitiatives\Loader\PluginLoader;
 use GivingTuesdayRo\GiveInitiatives\Taxonomies\Initiatives;
+use GivingTuesdayRo\GiveInitiatives\Templates\PageTemplater;
 
 /**
  * Class GiveInitiatives
@@ -64,6 +65,7 @@ class GiveInitiatives
         $this->loadDependencies();
         $this->defineTaxonomies();
         $this->defineAdmin();
+        $this->defineTemplates();
 //        $this->set_locale();
 //        $this->define_admin_hooks();
 //        $this->define_public_hooks();
@@ -77,6 +79,10 @@ class GiveInitiatives
             $this->setVersion('1.0.0');
         }
         $this->setName('give-initiatives');
+
+        if (!defined('GIVE_INITIATIVES_SRC')) {
+            define('GIVE_INITIATIVES_SRC', __DIR__);
+        }
     }
 
     protected function registerActivations()
@@ -100,6 +106,11 @@ class GiveInitiatives
     {
         $initiatives = new AdminLoader();
         $initiatives->run();
+    }
+
+    protected function defineTemplates()
+    {
+        $templater = PageTemplater::run($this);
     }
 
     /**
@@ -149,5 +160,4 @@ class GiveInitiatives
     {
         $this->loader = $loader;
     }
-
 }
