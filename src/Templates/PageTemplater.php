@@ -151,5 +151,4 @@ class PageTemplater
         // Return template
         return $template;
     }
-
 }

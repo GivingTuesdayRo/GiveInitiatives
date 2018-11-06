@@ -14,7 +14,10 @@ class Initiatives extends AbstractTaxonomy {
 	protected function defineTaxonomy() {
 		$initiatives = new PostType(
 			'initiative',
-			[ 'supports' => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ] ]
+			[
+				'supports'     => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ],
+				'show_in_rest' => true
+			]
 		);
 
 		// Add the genre taxonomy to the book post type

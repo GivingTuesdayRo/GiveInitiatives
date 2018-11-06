@@ -110,7 +110,7 @@ class GiveInitiatives
 
     protected function defineTemplates()
     {
-        $templater = PageTemplater::run($this);
+        PageTemplater::run($this);
     }
 
     /**
