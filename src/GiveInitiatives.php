@@ -3,6 +3,7 @@
 namespace GivingTuesdayRo\GiveInitiatives;
 
 use GivingTuesdayRo\GiveInitiatives\Admin\AdminLoader;
+use GivingTuesdayRo\GiveInitiatives\Api\ApiLoader;
 use GivingTuesdayRo\GiveInitiatives\Hooks\Activation;
 use GivingTuesdayRo\GiveInitiatives\Hooks\Deactivation;
 use GivingTuesdayRo\GiveInitiatives\Loader\PluginLoader;
@@ -69,6 +70,7 @@ class GiveInitiatives
 //        $this->set_locale();
 //        $this->define_admin_hooks();
 //        $this->define_public_hooks();
+        $this->defineApi();
     }
 
     protected function bootVariables()
@@ -107,6 +109,11 @@ class GiveInitiatives
         $initiatives = new AdminLoader();
         $initiatives->run();
     }
+
+	protected function defineApi()
+	{
+		ApiLoader::run($this);
+	}
 
     protected function defineTemplates()
     {

@@ -11,9 +11,11 @@ use PostTypes\Taxonomy;
  */
 class Initiatives extends AbstractTaxonomy {
 
+	const TAXONOMY_TYPE = 'initiative';
+
 	protected function defineTaxonomy() {
 		$initiatives = new PostType(
-			'initiative',
+			self::TAXONOMY_TYPE,
 			[
 				'supports'     => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ],
 				'show_in_rest' => true
