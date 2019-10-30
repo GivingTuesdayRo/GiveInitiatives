@@ -9,140 +9,136 @@ use GivingTuesdayRo\GiveInitiatives\Hooks\Deactivation;
 use GivingTuesdayRo\GiveInitiatives\Loader\PluginLoader;
 use GivingTuesdayRo\GiveInitiatives\Taxonomies\Initiatives;
 use GivingTuesdayRo\GiveInitiatives\Templates\PageTemplater;
+use GivingTuesdayRo\GiveInitiatives\Upgrade\UpgradeManager;
 
 /**
  * Class GiveInitiatives
  * @package GivingTuesdayRo\GiveInitiatives
  */
-class GiveInitiatives
-{
+class GiveInitiatives {
 
-    /**
-     * The current version of the plugin.
-     *
-     * @since    1.0.0
-     * @access   protected
-     * @var      string $version The current version of the plugin.
-     */
-    protected $version;
-    /**
-     * The unique identifier of this plugin.
-     *
-     * @since    1.0.0
-     * @access   protected
-     * @var      string $name The string used to uniquely identify this plugin.
-     */
-    protected $name;
+	/**
+	 * The current version of the plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      string $version The current version of the plugin.
+	 */
+	protected $version;
 
-    /**
-     * The loader that's responsible for maintaining and registering all hooks that power
-     * the plugin.
-     *
-     * @since    1.0.0
-     * @access   protected
-     * @var      PluginLoader $loader Maintains and registers all hooks for the plugin.
-     */
-    protected $loader;
+	/**
+	 * The unique identifier of this plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      string $name The string used to uniquely identify this plugin.
+	 */
+	protected $name;
 
-    /**
-     * GiveInitiatives constructor.
-     */
-    public function __construct()
-    {
-        $this->boot();
-    }
+	/**
+	 * The loader that's responsible for maintaining and registering all hooks that power
+	 * the plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      PluginLoader $loader Maintains and registers all hooks for the plugin.
+	 */
+	protected $loader;
 
-
-    static public function run()
-    {
-        $plugin = new self();
-        $plugin->boot();
-        $plugin->getLoader()->run();
-    }
-
-    public function boot()
-    {
-        $this->bootVariables();
-        $this->loadDependencies();
-        $this->defineTaxonomies();
-        $this->defineAdmin();
-        $this->defineTemplates();
-//        $this->set_locale();
-//        $this->define_admin_hooks();
-//        $this->define_public_hooks();
-        $this->defineApi();
-    }
-
-    protected function bootVariables()
-    {
-        if (defined('GIVE_INITIATIVES_VERSION')) {
-            $this->setVersion(GIVE_INITIATIVES_VERSION);
-        } else {
-            $this->setVersion('1.0.0');
-        }
-        $this->setName('give-initiatives');
-
-        if (!defined('GIVE_INITIATIVES_SRC')) {
-            define('GIVE_INITIATIVES_SRC', __DIR__);
-        }
-    }
-
-    protected function registerActivations()
-    {
-        register_activation_hook(__DIR__.'/Hooks/Activation.php', [Activation::class, 'run']);
-        register_deactivation_hook(__DIR__.'/Hooks/Deactivation.php', [Deactivation::class, 'run']);
-    }
-
-    protected function loadDependencies()
-    {
-        $this->setLoader(new PluginLoader());
-    }
-
-    protected function defineTaxonomies()
-    {
-        $initiatives = new Initiatives();
-        $initiatives->register();
-    }
-
-    protected function defineAdmin()
-    {
-        $initiatives = new AdminLoader();
-        $initiatives->run();
-    }
-
-	protected function defineApi()
-	{
-		ApiLoader::run($this);
+	/**
+	 * GiveInitiatives constructor.
+	 */
+	public function __construct() {
+		$this->boot();
 	}
 
-    protected function defineTemplates()
-    {
-        PageTemplater::run($this);
-    }
 
-    /**
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->version;
-    }
+	static public function run() {
+		$plugin = new self();
+		$plugin->boot();
+		$plugin->getLoader()->run();
+	}
 
-    /**
-     * @param string $version
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
-    }
+	public function boot() {
+		$this->bootVariables();
+		$this->loadDependencies();
+		$this->defineTaxonomies();
+		$this->defineAdmin();
+		$this->defineTemplates();
+		$this->defineHooks();
+//        $this->set_locale();
+//        $this->define_admin_hooks();
+//        $this->definePublicHooks();
+		$this->defineUpgradeActions();
+		$this->defineApi();
+	}
 
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
+	protected function bootVariables() {
+		if ( defined( 'GIVE_INITIATIVES_VERSION' ) ) {
+			$this->setVersion( GIVE_INITIATIVES_VERSION );
+		} else {
+			$this->setVersion( '1.0.0' );
+		}
+
+		$this->setName( 'give-initiatives' );
+
+		if ( ! defined( 'GIVE_INITIATIVES_SRC' ) ) {
+			define( 'GIVE_INITIATIVES_SRC', __DIR__ );
+		}
+	}
+
+	protected function defineHooks() {
+		register_activation_hook( __DIR__ . '/Hooks/Activation.php', [ Activation::class, 'run' ] );
+		register_deactivation_hook( __DIR__ . '/Hooks/Deactivation.php', [ Deactivation::class, 'run' ] );
+	}
+
+	protected function loadDependencies() {
+		$this->setLoader( new PluginLoader() );
+	}
+
+	protected function defineTaxonomies() {
+		$initiatives = new Initiatives();
+		$initiatives->register();
+	}
+
+	protected function defineAdmin() {
+		$initiatives = new AdminLoader();
+		$initiatives->run();
+	}
+
+	protected function defineApi() {
+		ApiLoader::run( $this );
+	}
+
+	protected function defineUpgradeActions() {
+		UpgradeManager::run( $this );
+
+	}
+
+	protected function defineTemplates() {
+		PageTemplater::run( $this );
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getVersion() {
+		return $this->version;
+	}
+
+	/**
+	 * @param string $version
+	 */
+	public function setVersion( $version ) {
+		$this->version = $version;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getName() {
+		return $this->name;
+	}
 
     /**
      * @param string $name

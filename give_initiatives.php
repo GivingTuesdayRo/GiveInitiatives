@@ -23,10 +23,12 @@
  *
  * @package WordPress\Plugin\My_WP_Plugin
  */
-if ( ! defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 } // Disallow direct HTTP access.
 
 require 'vendor/autoload.php';
+
+define( 'GIVE_INITIATIVES_VERSION', '1.0.1' );
 
 \GivingTuesdayRo\GiveInitiatives\GiveInitiatives::run();

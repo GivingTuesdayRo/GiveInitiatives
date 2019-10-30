@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ae827742-1da2-467a-999c-df332d50ddb7" name="givingtuesday.ro" url="http://ftp.givingtuesday.ro">
-        <fileTransfer host="ftp.givingtuesday.ro" port="21" rootFolder="/public_html/wp-content/plugins/give-initiatives">
+      <webServer id="ae827742-1da2-467a-999c-df332d50ddb7" name="givingtuesday.ro" url="https://givingtuesday.ro">
+        <fileTransfer host="ftp.envisionromania.org" port="21" rootFolder="/givingtuesday.ro/wp-content/plugins/give-initiatives">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
           </advancedOptions>
