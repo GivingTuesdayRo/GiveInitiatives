@@ -117,39 +117,57 @@ class PageTemplater
      */
     public function view_project_template($template)
     {
-        // Return the search template if we're searching (instead of the template for the first result)
-        if (is_search()) {
-            return $template;
-        }
+	    // Return the search template if we're searching (instead of the template for the first result)
+	    if ( is_search() ) {
+		    return $template;
+	    }
 
-        // Get global post
-        global $post;
+	    // Allows filtering of file path
+	    $templatePaths = GIVE_INITIATIVES_SRC . '\Frontend\views\\';
 
-        // Return template if post is empty
-        if (!$post) {
-            return $template;
-        }
-        // Return default template if we don't have a custom one defined
-        if (!isset($this->templates[get_post_meta(
-                $post->ID, '_wp_page_template', true
-            )])) {
-            return $template;
-        }
-        // Allows filtering of file path
-        $filepath = GIVE_INITIATIVES_SRC;
-        $file = $filepath
-            .'\Frontend\views\\'
-            .get_post_meta(
-                $post->ID, '_wp_page_template', true
-            );
-        // Just to be safe, we check if the file exist first
-        if (file_exists($file)) {
-            return $file;
-        } else {
-            echo $file;
-        }
+	    if ( is_post_type_archive( 'initiative' ) ) {
+		    $theme_files     = [ 'archive-givewp_initiatives.php', 'givewp/archive-initiatives.php' ];
+		    $exists_in_theme = locate_template( $theme_files, false );
+		    if ( $exists_in_theme != '' ) {
+			    return $exists_in_theme;
+		    } else {
+			    return $templatePaths . 'archive-initiatives.php';
+		    }
+	    }
 
-        // Return template
-        return $template;
+	    if ( $template == 'initiatives-filter' ) {
+		    return $templatePaths . 'initiatives-filter.php';
+	    }
+
+	    // Get global post
+	    global $post;
+
+	    // Return template if post is empty
+	    if ( ! $post ) {
+		    return $template;
+	    }
+
+	    // Return default template if we don't have a custom one defined
+	    if ( ! isset( $this->templates[ get_post_meta(
+			    $post->ID, '_wp_page_template', true
+		    ) ] ) ) {
+		    return $template;
+	    }
+
+	    // Allows filtering of file path
+	    $file = $templatePaths
+	            . '\Frontend\views\\'
+	            . get_post_meta(
+		            $post->ID, '_wp_page_template', true
+	            );
+	    // Just to be safe, we check if the file exist first
+	    if ( file_exists( $file ) ) {
+		    return $file;
+	    } else {
+		    echo $file;
+	    }
+
+	    // Return template
+	    return $template;
     }
 }

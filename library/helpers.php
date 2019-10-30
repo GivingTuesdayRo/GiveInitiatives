@@ -8,5 +8,5 @@ namespace GiveInitiatives\Library;
  */
 function asset_path($asset)
 {
-    return plugin_dir_url( dirname(__DIR__).'give_initiatives.php' ) . '/public/'. $asset;
+    return plugins_url( '/public/' . $asset, dirname( __DIR__ ) . '/give_initiatives.php' );
 }
