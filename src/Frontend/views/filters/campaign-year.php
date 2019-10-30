@@ -1,4 +1,4 @@
-<div class="initiative-filter form-group">
+
     <h4 class="filter-title">
         <label for="campaign-year">
             Campanie:
@@ -28,4 +28,3 @@
 		?>
 
     </select>
-</div>

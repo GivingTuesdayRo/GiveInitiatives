@@ -1,11 +1,11 @@
-<div class="initiative-filter form-group">
+
 	<h4 class="filter-title">
 		<label for="initiative-type">
 			Tip initiativa:
 		</label>
 	</h4>
 
-	<select name="initiative-type" class="form-control">
+	<select id="initiative-type" name="initiative-type" class="form-control">
 		<option value="">Select</option>
 		<?php
 		$args = [
@@ -26,6 +26,4 @@
 			<?php
 		}
 		?>
-
 	</select>
-</div>

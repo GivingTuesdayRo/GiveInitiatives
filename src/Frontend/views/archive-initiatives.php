@@ -12,23 +12,20 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) : ?>
                 <div class="container">
-                    <header class="page-header">
+                    <header class="entry-header">
+                        <h1 class="entry-title">
+                            Initiative
+                        </h1>
 						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						//						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="archive-description">', '</div>' );
 						?>
                     </header><!-- .page-header -->
                 </div>
 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3">
-							<?php require 'initiatives-filter.php'; ?>
-                        </div>
-                        <div class="col-sm-8 col-md-9">
-							<?php require 'loop-initiatives.php'; ?>
-                        </div>
-                    </div>
+					<?php require 'initiatives-filter.php'; ?>
+					<?php require 'loop-initiatives.php'; ?>
                 </div>
 
 				<?php
