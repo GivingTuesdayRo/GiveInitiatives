@@ -123,7 +123,7 @@ class PageTemplater
 	    }
 
 	    // Allows filtering of file path
-	    $templatePaths = GIVE_INITIATIVES_SRC . '\Frontend\views\\';
+	    $templatePaths = GIVE_INITIATIVES_SRC . '/Frontend/views//';
 
 	    if ( is_post_type_archive( 'initiative' ) ) {
 		    $theme_files     = [ 'archive-givewp_initiatives.php', 'givewp/archive-initiatives.php' ];

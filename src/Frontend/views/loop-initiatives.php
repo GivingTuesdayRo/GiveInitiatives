@@ -6,7 +6,7 @@
 		while ( have_posts() ) : the_post();
 			$i ++;
 			?>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-md-4">
 				<?php
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -16,7 +16,6 @@
 				get_template_part( 'resources/templates/posts/boxes/generic', get_post_format() );
 				?>
             </div>
-			<?php echo ( fmod( $i, 2 ) == 0 ) ? '<div class="w-100"></div>' : ''; ?>
 		<?php
 		endwhile;
 		?>
