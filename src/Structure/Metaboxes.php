@@ -36,11 +36,11 @@ class Metaboxes
 	            ],
 	            [
 		            'name'  => 'initiative_city',
-		            'label' => 'Unde'
+		            'label' => 'Oras'
 	            ],
 	            [
 		            'name'  => 'initiative_county',
-		            'label' => 'Unde'
+		            'label' => 'Judet'
 	            ]
             ]
         ] );

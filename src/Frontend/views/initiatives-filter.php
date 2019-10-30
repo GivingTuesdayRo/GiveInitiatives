@@ -4,8 +4,21 @@
             <div class="initiative-filter col-auto pr-3">
 				<?php require 'filters/campaign-year.php'; ?>
             </div>
+
             <div class="initiative-filter col-auto pl-3 pr-3">
 				<?php require 'filters/initiative-type.php'; ?>
+            </div>
+
+            <div class="initiative-filter col-auto pl-3 pr-3">
+				<?php require 'filters/initiator-type.php'; ?>
+            </div>
+
+            <div class="initiative-filter col-auto pl-3 pr-3">
+				<?php require 'filters/beneficiary-type.php'; ?>
+            </div>
+
+            <div class="initiative-filter col-auto pl-3 pr-3">
+				<?php require 'filters/location.php'; ?>
             </div>
 
             <div class="col-auto pl-3">

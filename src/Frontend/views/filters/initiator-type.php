@@ -1,15 +1,15 @@
 
 	<h4 class="filter-title">
-		<label for="initiative-type">
-			Tip initiativa:
+		<label for="initiator-type">
+			Initiator:
 		</label>
 	</h4>
 
-	<select id="initiative-type" name="initiative-type" class="form-control">
+	<select id="initiator-type" name="initiator-type" class="form-control">
 		<option value="">Select</option>
 		<?php
 		$args = [
-			'taxonomy' => 'Initiative Type',
+			'taxonomy' => 'Initiator Type',
 			'orderby'  => 'name',
 			'order'    => 'ASC',
 			"hide_empty" => 0
@@ -20,7 +20,7 @@
 		foreach ( $cats as $cat ) {
 			?>
 			<option value="<?php echo $cat->slug ?>"
-				<?php echo isset( $_GET['initiative-type'] ) && $_GET['initiative-type'] == $cat->slug ? 'selected' : '' ?>
+				<?php echo isset( $_GET['initiator-type'] ) && $_GET['initiator-type'] == $cat->slug ? 'selected' : '' ?>
 			>
 				<?php echo $cat->name; ?>
 			</option>

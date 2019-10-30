@@ -39,12 +39,43 @@ class FrontendLoader
 
 	protected function boot() {
 		$this->assets();
+		$this->addFilters();
 	}
 
+	/**
+	 * @param \WP_Query $query
+	 */
+	public function filterInitiatives( $query ) {
+		if ( $query->is_main_query() && ! is_admin() && is_post_type_archive( 'initiative' ) ) {
 
+			// get original meta query
+			$meta_query = $query->get( 'meta_query' );
 
-	public function assets()
-	{
+			$meta_query = $meta_query ? $meta_query : [];
+
+			if ( ! empty( $_GET['initiative-location'] ) ) {
+				$locations = explode( ' ', $_GET['initiative-location'] );
+
+				$locationQuery = [ 'relation' => 'OR' ];
+				foreach ( $locations as $key => $location ) {
+					$locationQuery[ 'location' . $key ] = [
+						'key'     => 'givewp_initiative_options_initiative_county',
+						'value'   => $location,
+						'compare' => 'LIKE',
+					];
+				}
+				$meta_query[] = $locationQuery;
+			}
+
+			// update the meta query args
+			$query->set( 'meta_query', $meta_query );
+
+			// always return
+			return;
+		}
+	}
+
+	protected function assets() {
 //		wp_enqueue_script(
 //			'givewp-frontend',
 //			asset_path('/scripts/frontend.js'),
@@ -54,10 +85,14 @@ class FrontendLoader
 //		);
 		wp_enqueue_style(
 			'givewp-frontend',
-			asset_path('/styles/frontend.css'),
+			asset_path( '/styles/frontend.css' ),
 			[],
 			null,
 			'all'
 		);
+	}
+
+	protected function addFilters() {
+		$this->plugin->getLoader()->addFilter( 'pre_get_posts', $this, 'filterInitiatives' );
 	}
 }

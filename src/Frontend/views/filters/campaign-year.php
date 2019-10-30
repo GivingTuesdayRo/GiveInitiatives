@@ -11,7 +11,8 @@
 		$args = [
 			'taxonomy' => 'Campaign Year',
 			'orderby'  => 'name',
-			'order'    => 'ASC'
+			'order'    => 'ASC',
+			"hide_empty" => 0
 		];
 
 		$cats = get_categories( $args );
