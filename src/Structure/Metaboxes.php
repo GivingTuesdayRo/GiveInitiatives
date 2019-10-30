@@ -19,14 +19,6 @@ class Metaboxes
             'context' => 'normal',
             'fields' => [
 	            [
-		            'name'  => 'initiative_name',
-		            'label' => 'Denumire'
-	            ],
-	            [
-		            'name'  => 'initiative_type',
-		            'label' => 'Tip initiativa'
-	            ],
-	            [
 		            'name'  => 'initiative_date',
 		            'label' => 'Cand se intampla'
 	            ],
