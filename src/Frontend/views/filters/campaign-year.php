@@ -9,7 +9,7 @@
         <option value="">Select</option>
 		<?php
 		$args = [
-			'taxonomy' => 'Campaign Year',
+			'taxonomy' => 'campaign-year',
 			'orderby'  => 'name',
 			'order'    => 'ASC',
 			"hide_empty" => 0

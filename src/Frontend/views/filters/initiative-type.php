@@ -9,7 +9,7 @@
 		<option value="">Select</option>
 		<?php
 		$args = [
-			'taxonomy' => 'Initiative Type',
+			'taxonomy' => 'initiative-type',
 			'orderby'  => 'name',
 			'order'    => 'ASC',
 			"hide_empty" => 0

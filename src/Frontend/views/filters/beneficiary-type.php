@@ -9,7 +9,7 @@
 		<option value="">Select</option>
 		<?php
 		$args = [
-			'taxonomy' => 'Beneficiary Type',
+			'taxonomy' => 'beneficiary-type',
 			'orderby'  => 'name',
 			'order'    => 'ASC',
 			"hide_empty" => 0

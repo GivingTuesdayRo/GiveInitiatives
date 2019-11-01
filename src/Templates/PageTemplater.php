@@ -55,7 +55,7 @@ class PageTemplater
         // Add your templates to this array.
         $this->templates = [
             'templates-post.php' => 'Initiative Post',
-            'templates-initiatives.php' => 'Initiatives Archive',
+            'archive-initiatives.php' => 'Initiatives Archive',
         ];
         $this->registerFilters();
     }
