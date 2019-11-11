@@ -55,6 +55,14 @@ class Metaboxes
 				    'name'  => 'contact_email',
 				    'label' => 'Email persoana de contact'
 			    ],
+			    [
+				    'name'  => 'contact_phone',
+				    'label' => 'Telefon persoana de contact'
+			    ],
+			    [
+				    'name'  => 'contact_public',
+				    'label' => 'Contact public (yes, no)'
+			    ],
 		    ]
 	    ] );
     }
