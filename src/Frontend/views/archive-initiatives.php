@@ -11,9 +11,6 @@ get_header(); ?>
         <main id="main" class="site-main">
             <div class="container">
                 <header class="entry-header">
-                    <a href="https://givingtuesday.ro/initiative-adauga/" class="btn btn-success btn-lg float-right">
-                        Propune intiativa ta
-                    </a>
                     <h1 class="">
                         Initiative
                     </h1>
@@ -21,6 +18,9 @@ get_header(); ?>
                         Mai jos gasesti lista intiativelor propuse de alti oameni si grupuri de bine. Speram ca te vor
                         inspira!
                     </p>
+                    <a href="https://givingtuesday.ro/initiative-adauga/" class="btn btn-danger btn-lg btn-initiative-add">
+                        Înscrie inițiativa
+                    </a>
                 </header><!-- .page-header -->
             </div>
 
@@ -46,8 +46,8 @@ get_header(); ?>
 			endif; ?>
 
             <div class="container text-center mb-5">
-                <a href="https://givingtuesday.ro/initiative-adauga/" class="btn btn-success btn-lg center">
-                    Propune intiativa ta
+                <a href="https://givingtuesday.ro/initiative-adauga/" class="btn btn-danger btn-lg center  btn-initiative-add">
+                    Înscrie inițiativa
                 </a>
             </div>
         </main><!-- #main -->

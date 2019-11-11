@@ -1,3 +1,11 @@
 .initiatives-filters .filter-title {
     font-size: 18px;
 }
+
+.post-type-archive-initiative .btn-initiative-add {
+    color: #fff;
+
+    border-color: #ff675b;
+
+    background-color: #ff675b;border-radius: 2em;
+}
