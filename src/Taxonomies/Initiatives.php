@@ -18,37 +18,58 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'supports'     => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ],
 				'show_in_rest' => true,
+				'show_ui'      => true,
 				'has_archive'  => true
 			]
 		);
 
-		$initiatives->taxonomy( [
-			'name'     => 'campaign-year',
-			'slug'     => 'campaign-year',
-			'singular' => 'Campaign Year',
-			'plural'   => 'Campaign Years'
-		] );
+		$initiatives->taxonomy(
+			[
+				'name'     => 'campaign-year',
+				'slug'     => 'campaign-year',
+				'singular' => 'Campaign Year',
+				'plural'   => 'Campaign Years',
+			],
+			[
+				'show_in_rest' => true
+			]
+		);
 
-		$initiatives->taxonomy( [
-			'name'     => 'initiative-type',
-			'slug'     => 'initiative-type',
-			'singular' => 'Initiative Type',
-			'plural'   => 'Initiative Types'
-		] );
+		$initiatives->taxonomy(
+			[
+				'name'     => 'initiative-type',
+				'slug'     => 'initiative-type',
+				'singular' => 'Initiative Type',
+				'plural'   => 'Initiative Types'
+			],
+			[
+				'show_in_rest' => true
+			]
+		);
 
-		$initiatives->taxonomy( [
-			'name'     => 'initiator-type',
-			'slug'     => 'initiator-type',
-			'singular' => 'Initiator Type',
-			'plural'   => 'Initiator Types'
-		] );
+		$initiatives->taxonomy(
+			[
+				'name'     => 'initiator-type',
+				'slug'     => 'initiator-type',
+				'singular' => 'Initiator Type',
+				'plural'   => 'Initiator Types'
+			],
+			[
+				'show_in_rest' => true
+			]
+		);
 
-		$initiatives->taxonomy( [
-			'name'     => 'beneficiary-type',
-			'slug'     => 'beneficiary-type',
-			'singular' => 'Beneficiary Type',
-			'plural'   => 'Beneficiary Types'
-		] );
+		$initiatives->taxonomy(
+			[
+				'name'     => 'beneficiary-type',
+				'slug'     => 'beneficiary-type',
+				'singular' => 'Beneficiary Type',
+				'plural'   => 'Beneficiary Types'
+			],
+			[
+				'show_in_rest' => true
+			]
+		);
 
 		$initiatives->taxonomy( 'post_tag' );
 
