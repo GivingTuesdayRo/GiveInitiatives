@@ -1,6 +1,6 @@
 <h4 class="filter-title">
 	<label for="initiative-location">
-		Locatie:
+		Locație:
 	</label>
 </h4>
 

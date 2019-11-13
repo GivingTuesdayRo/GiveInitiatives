@@ -32,8 +32,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'campaign-year',
 				'slug'     => 'campaign-year',
-				'singular' => 'Campaign Year',
-				'plural'   => 'Campaign Years',
+				'singular' => __( 'Campaign Year', 'give' ),
+				'plural'   => __( 'Campaign Years', 'give' ),
 			],
 			[
 				'show_in_rest' => true
@@ -44,8 +44,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'initiative-type',
 				'slug'     => 'initiative-type',
-				'singular' => 'Initiative Type',
-				'plural'   => 'Initiative Types'
+				'singular' => __( 'Initiative Type', 'give' ),
+				'plural'   => __( 'Initiative Types', 'give' ),
 			],
 			[
 				'show_in_rest' => true
@@ -56,8 +56,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'initiator-type',
 				'slug'     => 'initiator-type',
-				'singular' => 'Initiator Type',
-				'plural'   => 'Initiator Types'
+				'singular' => __( 'Initiator Type', 'give' ),
+				'plural'   => __( 'Initiator Types', 'give' ),
 			],
 			[
 				'show_in_rest' => true
@@ -68,8 +68,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'beneficiary-type',
 				'slug'     => 'beneficiary-type',
-				'singular' => 'Beneficiary Type',
-				'plural'   => 'Beneficiary Types'
+				'singular' => __( 'Beneficiary Type', 'give' ),
+				'plural'   => __( 'Beneficiary Types', 'give' ),
 			],
 			[
 				'show_in_rest' => true

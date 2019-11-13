@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GiveInitiatives\n"
-"POT-Creation-Date: 2019-11-13 10:41+0200\n"
-"PO-Revision-Date: 2019-11-13 10:45+0200\n"
+"POT-Creation-Date: 2019-11-13 11:07+0200\n"
+"PO-Revision-Date: 2019-11-13 11:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ro_RO\n"
@@ -10,29 +10,240 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.7\n"
-"X-Poedit-Basepath: ..\n"
+"X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
 "2:1));\n"
 "X-Poedit-KeywordsList: __\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPath-0: plugins/give-initiatives\n"
+"X-Poedit-SearchPath-1: themes/givingtuesday\n"
+"X-Poedit-SearchPathExcluded-0: plugins/give-initiatives/vendor\n"
 
-#: src/Frontend/views/pagination.php:6
+#: plugins/give-initiatives/src/Frontend/views/archive-initiatives.php:15
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:21
+msgid "Initiatives"
+msgstr "Inițiative"
+
+#: plugins/give-initiatives/src/Frontend/views/initiatives/filters.php:28
+msgid "Filter"
+msgstr "Filtrează"
+
+#: plugins/give-initiatives/src/Frontend/views/initiatives/filters/beneficiary-type.php:4
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:71
+msgid "Beneficiary Type"
+msgstr "Tip beneficiar"
+
+#: plugins/give-initiatives/src/Frontend/views/initiatives/filters/campaign-year.php:4
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:35
+msgid "Campaign Year"
+msgstr "Anul campaniei"
+
+#: plugins/give-initiatives/src/Frontend/views/initiatives/filters/initiative-type.php:4
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:47
+msgid "Initiative Type"
+msgstr "Tipul inițiativei"
+
+#: plugins/give-initiatives/src/Frontend/views/initiatives/filters/initiator-type.php:4
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:59
+msgid "Initiator Type"
+msgstr "Tip inițiator"
+
+#: plugins/give-initiatives/src/Frontend/views/pagination.php:6
+#: themes/givingtuesday/resources/templates/posts/navigation/pagination.php:4
 msgid "Previous page"
 msgstr "Pagina anterioară"
 
-#: src/Frontend/views/pagination.php:10
+#: plugins/give-initiatives/src/Frontend/views/pagination.php:10
+#: themes/givingtuesday/resources/templates/posts/navigation/pagination.php:5
 msgid "Next page"
 msgstr "Pagina următoare"
 
-#: src/Frontend/views/pagination.php:20
+#: plugins/give-initiatives/src/Frontend/views/pagination.php:20
 msgid "Posts navigation"
 msgstr "Navigare postări"
 
-#: src/Taxonomies/Initiatives.php:20
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:20
 msgid "Initiative"
 msgstr "Iniţiativă"
 
-#: src/Taxonomies/Initiatives.php:21
-msgid "Initiatives"
-msgstr "Inițiative"
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:36
+msgid "Campaign Years"
+msgstr "Ani campanie"
+
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:48
+msgid "Initiative Types"
+msgstr "Tipuri de inițiativă"
+
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:60
+msgid "Initiator Types"
+msgstr "Tipuri de inițiator"
+
+#: plugins/give-initiatives/src/Taxonomies/Initiatives.php:72
+msgid "Beneficiary Types"
+msgstr "Tipuri de beneficiari"
+
+#: themes/givingtuesday/comments.php:78
+msgid "Name"
+msgstr ""
+
+#: themes/givingtuesday/comments.php:82
+msgid "Email"
+msgstr ""
+
+#: themes/givingtuesday/comments.php:88
+msgid "Comment"
+msgstr ""
+
+#: themes/givingtuesday/inc/template-tags.php:75
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: themes/givingtuesday/inc/template-tags.php:92
+#: themes/givingtuesday/resources/templates/posts/content/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs-parser/index.js:301
+#: themes/givingtuesday/node_modules/yargs-parser/index.js:306
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs-parser/index.js:449
+#: themes/givingtuesday/node_modules/yargs-parser/index.js:454
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:169
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:169
+msgid "Commands:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:177
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:407
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:177
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:407
+msgid "default:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:179
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:179
+msgid "aliases:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:241
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:241
+msgid "boolean"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:242
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:242
+msgid "count"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:243
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:244
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:243
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:244
+msgid "string"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:245
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:245
+msgid "array"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:246
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:246
+msgid "number"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:250
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:250
+msgid "required"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:251
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:251
+msgid "choices:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:270
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:270
+msgid "Examples:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/usage.js:385
+#: themes/givingtuesday/node_modules/yargs/lib/usage.js:385
+msgid "generated-value"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:26
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:49
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:27
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:50
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:37
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:38
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:185
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:186
+msgid "Invalid values:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:188
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:189
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:218
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:219
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:283
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:284
+msgid "Implications failed:"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:313
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:314
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: themes/givingtuesday/node_modules/sass-graph/node_modules/yargs/lib/validation.js:332
+#: themes/givingtuesday/node_modules/yargs/lib/validation.js:333
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: themes/givingtuesday/resources/templates/posts/boxes/generic-initiative.php:33
+msgid "When"
+msgstr "Când"
+
+#: themes/givingtuesday/resources/templates/posts/content/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: themes/givingtuesday/resources/templates/posts/content/content-single.php:22
+#: themes/givingtuesday/resources/templates/posts/content/content.php:34
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: themes/givingtuesday/resources/templates/posts/navigation/pagination.php:8
+msgid "Page"
+msgstr ""

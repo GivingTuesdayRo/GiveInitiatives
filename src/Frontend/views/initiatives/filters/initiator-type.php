@@ -1,7 +1,7 @@
 
 	<h4 class="filter-title">
 		<label for="initiator-type">
-			Initiator:
+			<?php echo __( 'Initiator Type', 'give' ); ?>:
 		</label>
 	</h4>
 

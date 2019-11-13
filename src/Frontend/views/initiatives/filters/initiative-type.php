@@ -1,7 +1,7 @@
 
 	<h4 class="filter-title">
 		<label for="initiative-type">
-			Tip initiativa:
+			<?php echo __( 'Initiative Type', 'give' ); ?>:
 		</label>
 	</h4>
 

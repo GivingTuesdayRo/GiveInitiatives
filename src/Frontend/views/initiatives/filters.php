@@ -25,7 +25,7 @@
 
             <div class="col pl-3 pt-3">
                 <button type="submit" class="btn btn-primary align-bottom">
-                    Filtreaza
+	                <?php echo __( 'Filter','give'); ?>:
                 </button>
             </div>
         </div>
