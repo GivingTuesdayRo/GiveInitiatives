@@ -32,15 +32,18 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
                 <div class="container">
 					<?php require 'loop-initiatives.php'; ?>
-                </div>
 
-				<?php
-				// Previous/next page navigation.
-				the_posts_pagination( [
-					'prev_text'          => __( 'Previous page' ),
-					'next_text'          => __( 'Next page' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page' ) . ' </span>',
-				] );
+					<?php
+					// Previous/next page navigation.
+					require 'pagination.php';
+					//					the_posts_pagination( [
+//						'prev_text'          => __( 'Previous page' ),
+//						'next_text'          => __( 'Next page' ),
+//						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page' ) . ' </span>',
+//					] );
+					?>
+                </div>
+			<?php
 			else :
 				get_template_part( 'resources/templates/posts/content/content', 'none' );
 			endif; ?>
