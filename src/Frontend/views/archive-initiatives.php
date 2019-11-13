@@ -12,13 +12,15 @@ get_header(); ?>
             <div class="container">
                 <header class="entry-header">
                     <h1 class="">
-                        Initiative
+						<?php echo __( 'Initiatives', 'give' ); ?>
                     </h1>
                     <p class="lead">
-                        Mai jos gasesti lista intiativelor propuse de alti oameni si grupuri de bine. Speram ca te vor
-                        inspira!
+                        Mai jos găsești lista ințiativelor de GivingTuesday ale ONG-urilor, companiilor, instituțiilor
+                        și oamenilor de bine.
+                        Înscrie propria inițiativă sau alătură-te inițiativelor lor!
                     </p>
-                    <a href="https://givingtuesday.ro/initiative-adauga/" class="btn btn-danger btn-lg btn-initiative-add">
+                    <a href="https://givingtuesday.ro/initiative-adauga/"
+                       class="btn btn-danger btn-lg btn-initiative-add">
                         Înscrie inițiativa
                     </a>
                 </header><!-- .page-header -->

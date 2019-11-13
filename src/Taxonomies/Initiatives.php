@@ -14,7 +14,12 @@ class Initiatives extends AbstractTaxonomy {
 
 	protected function defineTaxonomy() {
 		$initiatives = new PostType(
-			self::TAXONOMY_TYPE,
+			[
+				'name'     => self::TAXONOMY_TYPE,
+				'slug'     => self::TAXONOMY_TYPE,
+				'singular' => __( 'Initiative', 'give' ),
+				'plural'   => __( 'Initiatives', 'give' ),
+			],
 			[
 				'supports'     => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ],
 				'show_in_rest' => true,

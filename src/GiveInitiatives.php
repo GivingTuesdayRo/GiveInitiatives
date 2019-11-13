@@ -62,13 +62,13 @@ class GiveInitiatives {
 
 	public function boot() {
 		$this->bootVariables();
+		$this->defineInternationalization();
 		$this->loadDependencies();
 		$this->defineTaxonomies();
 		$this->defineAdmin();
 		$this->defineTemplates();
 		$this->defineFrontend();
 		$this->defineHooks();
-//        $this->set_locale();
 //        $this->define_admin_hooks();
 		$this->defineUpgradeActions();
 		$this->defineApi();
@@ -113,6 +113,10 @@ class GiveInitiatives {
 
 	protected function defineApi() {
 		ApiLoader::run( $this );
+	}
+
+	protected function defineInternationalization() {
+		load_plugin_textdomain( 'give', false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/' );
 	}
 
 	protected function defineUpgradeActions() {
