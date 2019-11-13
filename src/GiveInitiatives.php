@@ -86,6 +86,9 @@ class GiveInitiatives {
 		if ( ! defined( 'GIVE_INITIATIVES_SRC' ) ) {
 			define( 'GIVE_INITIATIVES_SRC', __DIR__ );
 		}
+		if ( ! defined( 'GIVE_INITIATIVES_TEXT_DOMAIN' ) ) {
+			define( 'GIVE_INITIATIVES_TEXT_DOMAIN', 'give' );
+		}
 	}
 
 	protected function defineHooks() {
@@ -116,7 +119,7 @@ class GiveInitiatives {
 	}
 
 	protected function defineInternationalization() {
-		load_plugin_textdomain( 'give', false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/' );
+		load_plugin_textdomain( GIVE_INITIATIVES_TEXT_DOMAIN, false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/' );
 	}
 
 	protected function defineUpgradeActions() {

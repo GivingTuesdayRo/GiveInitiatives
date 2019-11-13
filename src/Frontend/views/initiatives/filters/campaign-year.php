@@ -1,7 +1,7 @@
 
     <h4 class="filter-title">
         <label for="campaign-year">
-            <?php echo __( 'Campaign Year', 'give' ); ?>:
+            <?php echo __( 'Campaign Year', GIVE_INITIATIVES_TEXT_DOMAIN); ?>:
         </label>
     </h4>
 

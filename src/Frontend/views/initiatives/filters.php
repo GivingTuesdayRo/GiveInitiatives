@@ -16,16 +16,16 @@
 
         <div class="form-row">
             <div class="initiative-filter col pr-3">
-			    <?php require 'filters/beneficiary-type.php'; ?>
+		        <?php require 'filters/beneficiary-type.php'; ?>
             </div>
 
             <div class="initiative-filter col pl-3 pr-3">
-			    <?php require 'filters/location.php'; ?>
+		        <?php require 'filters/location.php'; ?>
             </div>
 
             <div class="col pl-3 pt-3">
                 <button type="submit" class="btn btn-primary align-bottom">
-	                <?php echo __( 'Filter','give'); ?>:
+			        <?php echo __( 'Filter', GIVE_INITIATIVES_TEXT_DOMAIN ); ?>:
                 </button>
             </div>
         </div>

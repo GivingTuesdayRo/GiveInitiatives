@@ -17,8 +17,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => self::TAXONOMY_TYPE,
 				'slug'     => self::TAXONOMY_TYPE,
-				'singular' => __( 'Initiative', 'give' ),
-				'plural'   => __( 'Initiatives', 'give' ),
+				'singular' => __( 'Initiative', GIVE_INITIATIVES_TEXT_DOMAIN),
+				'plural'   => __( 'Initiatives', GIVE_INITIATIVES_TEXT_DOMAIN),
 			],
 			[
 				'supports'     => [ 'title', 'editor', 'thumbnail', 'tags', 'custom-fields' ],
@@ -32,8 +32,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'campaign-year',
 				'slug'     => 'campaign-year',
-				'singular' => __( 'Campaign Year', 'give' ),
-				'plural'   => __( 'Campaign Years', 'give' ),
+				'singular' => __( 'Campaign Year', GIVE_INITIATIVES_TEXT_DOMAIN),
+				'plural'   => __( 'Campaign Years', GIVE_INITIATIVES_TEXT_DOMAIN),
 			],
 			[
 				'show_in_rest' => true
@@ -44,8 +44,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'initiative-type',
 				'slug'     => 'initiative-type',
-				'singular' => __( 'Initiative Type', 'give' ),
-				'plural'   => __( 'Initiative Types', 'give' ),
+				'singular' => __( 'Initiative Type', GIVE_INITIATIVES_TEXT_DOMAIN),
+				'plural'   => __( 'Initiative Types', GIVE_INITIATIVES_TEXT_DOMAIN),
 			],
 			[
 				'show_in_rest' => true
@@ -56,8 +56,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'initiator-type',
 				'slug'     => 'initiator-type',
-				'singular' => __( 'Initiator Type', 'give' ),
-				'plural'   => __( 'Initiator Types', 'give' ),
+				'singular' => __( 'Initiator Type', GIVE_INITIATIVES_TEXT_DOMAIN),
+				'plural'   => __( 'Initiator Types', GIVE_INITIATIVES_TEXT_DOMAIN),
 			],
 			[
 				'show_in_rest' => true
@@ -68,8 +68,8 @@ class Initiatives extends AbstractTaxonomy {
 			[
 				'name'     => 'beneficiary-type',
 				'slug'     => 'beneficiary-type',
-				'singular' => __( 'Beneficiary Type', 'give' ),
-				'plural'   => __( 'Beneficiary Types', 'give' ),
+				'singular' => __( 'Beneficiary Type', GIVE_INITIATIVES_TEXT_DOMAIN),
+				'plural'   => __( 'Beneficiary Types', GIVE_INITIATIVES_TEXT_DOMAIN),
 			],
 			[
 				'show_in_rest' => true

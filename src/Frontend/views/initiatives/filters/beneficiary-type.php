@@ -1,7 +1,7 @@
 
 	<h4 class="filter-title">
 		<label for="beneficiary-type">
-			<?php echo __( 'Beneficiary Type', 'give' ); ?>:
+			<?php echo __( 'Beneficiary Type', GIVE_INITIATIVES_TEXT_DOMAIN ); ?>:
 		</label>
 	</h4>
 
